@@ -120,15 +120,30 @@ main h1{
     gap: 1vw;
     animation: transform 0.1s ease-out;
 }
-#service1{
+.service{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    margin:5vw 10vw 5vw ;
 }
-.txt{
-    width: 30vw;
-}
-#service1 img{
+.service-txt{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
     width: 50%;
-    height: 50%;
+    text-align: justify;
+}
+#service img{
+    max-width: 50%;
+    max-height: 50%;
+}
+.service2-txt{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 50%;
+    text-align: justify;
+}
+.service h2{
+    color: #9A4042;
 }
