@@ -14,17 +14,28 @@ body{
     justify-content: space-between;
     margin-inline: auto;
 }
-#nav-listing{
+.nav-listing{
     display: flex;
     align-items: center;
     list-style: none;
     padding-right: 3vw;
 }
-#nav-listing a{
+.nav-listing a{
     padding: 10px 20px;
     font-size: 18px;
     text-decoration: none;
     color: #DBD6C8;
+}
+.nav-listing a:hover{
+    color: #232323;
+}
+#nav-logo{
+    display: flex;
+    align-items: center;
+}
+#nav-logo img{
+    padding: 0 22px;
+    max-width:6vw ;
 }
 header{
     background-image:url(Images/AdobeStock_826654348\ 1.png);
@@ -74,13 +85,24 @@ main h1{
     height: 3.5vw;
     border: #9A4042 solid 1px;
     border-radius:12px ;
+    color: #DBD6C8;
 
 }
 #CTA a {
-    color: #DBD6C8;
     text-decoration: none;
+}
+#CTA p {
     font-size: 14px;
     font-family: "Konkhmer Sleokchher";
+    color: #DBD6C8;
+}
+#CTA button:hover{
+    background-color: #DBD6C8;
+    color: #9A4042;
+    border: #DBD6C8;
+}
+#CTA p:hover{
+    color: #9A4042;
 }
 #card {
     display: flex;
@@ -109,6 +131,9 @@ main h1{
 }
 #card p{
     margin: 0;
+}#card button:hover{
+    background-color: #9A4042;
+    border: #9A4042;
 }
 #slider-container{
     margin: 0 0 10vw 10vw;
@@ -118,7 +143,31 @@ main h1{
     display: flex;
     flex-wrap: nowrap;
     gap: 1vw;
-    animation: transform 0.1s ease-out;
+    animation: transform 12s infinite ease-in-out;
+}
+#slider img{
+    width: 30vw;
+}
+@keyframes transform{
+    0%,
+    20%{
+        transform: translateX(0);
+    }
+    25%,
+    45%{
+        transform: translateX(-100%);
+    }
+    50%,
+    70%{
+        transform: translateX(-200%);
+    }
+    75%,
+    95%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(-400);
+    }
 }
 .service{
     display: flex;
@@ -133,9 +182,8 @@ main h1{
     width: 50%;
     text-align: justify;
 }
-#service img{
-    max-width: 50%;
-    max-height: 50%;
+.service img{
+    max-width: 40%;
 }
 .service2-txt{
     display: flex;
@@ -146,4 +194,57 @@ main h1{
 }
 .service h2{
     color: #9A4042;
+}
+footer{
+    background-color: #9A4042;
+}
+#headfooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 3vw 0;
+    padding: 2vw 0;
+}
+#headfooter h1{
+    font-size: 18px ;
+    margin: 0;
+}
+#reseau{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+#headfooter a{
+    min-width: 1.5vw;
+}
+#headfooter img{
+    display: flex;
+    justify-content: center;
+}
+#horizontal-line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#line{
+    width: 95%;
+    height: 1px;
+    background-color: #DBD6C8;
+}
+#bottomfooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 3vw 0;
+    padding: 2vw 0;
+}
+#bottomfooter ul{
+    padding: 0;
+}
+#bottomfooter a{
+    padding-left: 0;
+    color: #DBD6C8;
+    text-decoration: none;
+    font-size: 12px;
 }
