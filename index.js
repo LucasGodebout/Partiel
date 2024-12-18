@@ -1,6 +1,6 @@
 let currentTranslate = 0; // Position actuelle du slider
 
-const slider = document.getElementById('slider'); // Assurez-vous que l'élément slider est correctement sélectionné
+const slider = document.getElementsByClassName('slider'); // Assurez-vous que l'élément slider est correctement sélectionné
 const sliderContainer = document.getElementById('slider-container'); // Conteneur du slider
 
 // Calcul des limites

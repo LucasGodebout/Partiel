@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Konkhmer+Sleokchher&display=swap');
+
 body{
     margin: 0;
     padding: 0;
-    font-family: "Konkhmer Sleokchher";
+    font-family: "Inter";
     background-color:#232323;
     color: #DBD6C8;
 }
 #nav{
-    background: #9A4042;
+    background: #A31B1E;
 }
 #nav-container{
     display: flex;
@@ -25,6 +27,7 @@ body{
     font-size: 18px;
     text-decoration: none;
     color: #DBD6C8;
+    font-family: "konkhmer Sleokchher";
 }
 .nav-listing a:hover{
     color: #232323;
@@ -37,7 +40,7 @@ body{
     padding: 0 22px;
     max-width:6vw ;
 }
-header{
+#SD{
     background-image:url(Images/AdobeStock_826654348\ 1.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -54,21 +57,25 @@ header{
     flex-direction: column;
 }
 #SmartDrive h1{
+    font-family: "Konkhmer Sleokchher";
     font-size: 106px;
     margin: 0;
 }
 #SmartDrive p{
     font-family: Castoro;
-    font-size: 60px;
+    font-size: 50px;
     margin: 0;
 }
 main h1{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    font-family: Castoro;
+    font-size: 45px;
+    margin: 4vw 0;
 }
 #header-txt{
+    font-size: 18px;
     padding: 2vw 10vw 0;
 }
 #CTA{
@@ -80,29 +87,27 @@ main h1{
 
 }
 #CTA button{
-    background-color: #9A4042;
+    background-color: #A31B1E;
     width: 7vw;
     height: 3.5vw;
-    border: #9A4042 solid 1px;
+    border: #A31B1E solid 1px;
     border-radius:12px ;
     color: #DBD6C8;
 
 }
 #CTA a {
     text-decoration: none;
-}
-#CTA p {
     font-size: 14px;
     font-family: "Konkhmer Sleokchher";
     color: #DBD6C8;
 }
 #CTA button:hover{
     background-color: #DBD6C8;
-    color: #9A4042;
+    color: #A31B1E;
     border: #DBD6C8;
 }
-#CTA p:hover{
-    color: #9A4042;
+#CTA a:hover{
+    color: #A31B1E;
 }
 #card {
     display: flex;
@@ -132,8 +137,8 @@ main h1{
 #card p{
     margin: 0;
 }#card button:hover{
-    background-color: #9A4042;
-    border: #9A4042;
+    background-color: #A31B1E;
+    border: #A31B1E;
 }
 #slider-container{
     margin: 0 0 10vw 10vw;
@@ -193,10 +198,12 @@ main h1{
     text-align: justify;
 }
 .service h2{
-    color: #9A4042;
+    color: #A31B1E;
+    font-family: Castoro;
+    font-size: 32px;
 }
 footer{
-    background-color: #9A4042;
+    background-color: #A31B1E;
 }
 #headfooter{
     display: flex;
@@ -222,12 +229,12 @@ footer{
     display: flex;
     justify-content: center;
 }
-#horizontal-line{
+#line{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#line{
+#horizontal-line{
     width: 95%;
     height: 1px;
     background-color: #DBD6C8;
@@ -247,4 +254,234 @@ footer{
     color: #DBD6C8;
     text-decoration: none;
     font-size: 12px;
+}
+.vertical-line{
+    height: 30vw;
+    width: 1px;
+    background-color: #DBD6C8;
+}
+.lieu{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.reservation .lieu input{
+    width: 40vw; 
+}
+.reservation{
+    display: flex;
+    margin-bottom: 5vw;
+}
+#form-gauche{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0 5vw 0 ;
+}
+#form-droite{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0 5vw 0 ;
+}
+#aller-retour input{
+    width: 1vw;
+    margin: 0 2vw 2vw 0;
+    height: 1vw;
+}
+#aller-retour{
+    margin-top: 2vw;
+}
+#date-horaire{
+    display: flex;
+    justify-content: space-between;
+    gap: 1vw;
+}
+#date{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#horaire{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#adulte-enfant-bebe{
+    display: flex;
+    justify-content: space-between;
+    gap: 1vw;
+}
+.adulte{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#nom-prenom{
+    margin-top: 3.5vw;
+    display: flex;
+    justify-content: space-between;
+    gap: 12vw;
+}
+.nom{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#phone-email{
+    display: flex;
+    justify-content: space-between;
+    gap: 12vw;
+}
+.phone{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#comment{
+    display: flex;
+    flex-direction: column;
+}
+.reservation h2{
+    font-size: 24px;
+    font-family: "Konkhmer Sleokchher";
+    margin-bottom: 2vw;
+    font-weight: normal;
+}
+.reservation input{
+    width: 12.5vw;
+    height: 2vw;
+    border: #DBD6C8 solid 1px;
+    border-radius: 5px;
+    margin: 1vw 0 2vw;
+    font-size: 16px;
+    font-family: "Inter";
+}
+.reservation textarea{
+    width: 38vw;
+    height: 10vw;
+    border: #DBD6C8 solid 1px;
+    border-radius: 5px;
+    margin: 1vw 0 2vw;
+    font-size: 16px;
+    font-family: "Inter";
+}
+#submit{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+#submit button{
+    background-color: #A31B1E;
+    width: 7vw;
+    height: 3.5vw;
+    border: #A31B1E solid 1px;
+    border-radius: 10px;
+    color: #DBD6C8;
+    font-size: 16px;
+}
+#submit button:hover{
+    background-color: #DBD6C8;
+    color: #A31B1E;
+    border: #DBD6C8;
+}
+#contact {
+    background: rgba(211, 211, 211, 0.5);
+    background-image: url(Images/AdobeStock_509058265\ 1.png);
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vw;
+}
+.vline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#coordonnees{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    margin: 5vw 0;
+}
+#telephone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vw;
+    width: 33vw;
+}
+#mail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vw;
+    width: 33vw;
+}
+#dispo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vw;
+    width: 33vw;
+}
+#coordonnees img{
+    width: 3vw;
+}
+#contactez-nous h1{
+    font-family: "Konkhmer Sleokchher";
+    font-size: 90px;
+    margin: 0;
+}
+#message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5vw;
+}
+#message input{
+    width: 19vw;
+    height: 4vw;
+    border: #DBD6C8 solid 3px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: "Inter";
+    color: #DBD6C8;
+    background-color: #232323;
+}
+#npte{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 4vw;
+    margin: 5vw 0;
+}
+#message textarea{
+    width: 90vw;
+    height: 20vw;
+    border: #DBD6C8 solid 3px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: "Inter";
+    background-color: #232323;
+    color: #DBD6C8;
+    margin-bottom: 2vw;
+}
+::placeholder{
+    color: #DBD6C8;
+    padding-left: 1vw;
+}
+#message textarea::placeholder{
+    padding: 1vw;
 }

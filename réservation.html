@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="image/x-svg" href="Images/Plan de travail 1_1.svg">
+    <title>SmartDrive - Réservation</title>
+</head>
+<body>
+    <nav>
+        <div id="nav">
+            <div id="nav-container">
+                <a id="nav-logo" href="index.html">
+                    <img src="Images/Plan de travail 1_1.svg">
+                </a>
+                <ul class="nav-listing">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="contact.html">Services</a></li>
+                    <li><a href="réservation.html">Réservation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <h1>Réservez en ligne</h1>
+        <form class="reservation" action="/submit" method="post">
+            <div id="form-gauche">
+                <h2>Départ / Arrivé :</h2>
+                <label id="aller-retour" for="aller/retour"><input type="checkbox" name="aller/retour" required>Aller/Retour</label>
+                <div id="date-horaire">
+                    <div>
+                    <label id="date" for="date-départ">Date de Départ :
+                        <input type="date" name="date-départ">
+                    </label>
+                    </div>
+                    <div>
+                    <label id="horaire" for="horaire-départ">Horaire de Départ :
+                        <input type="time" name="horaire-départ">
+                    </div>
+                </div>
+                <div id="adulte-enfant-bebe">
+                    <div>
+                        <label class="adulte"  for="adulte">Adulte :
+                            <input type="number" name="adulte" min="1" max="10">
+                        </label>
+                    </div>
+                    <div>
+                        <label class="adulte" for="enfant">Enfant :
+                            <input type="number" name="enfant" min="0" max="10">
+                        </label>
+                    </div>
+                    <div>
+                        <label class="adulte" for="bebe">Bébé :
+                            <input type="number" name="bebe" min="0" max="10">
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <label class="lieu" for="lieu-départ">Lieu de Départ :
+                        <input type="text" name="lieu-départ">
+                    </label>
+                </div>
+                <div>
+                    <label class="lieu" for="lieu-arrivé">Lieu d'Arrivé :
+                        <input type="text" name="lieu-arrivé">
+                    </label>
+                </div>
+            </div>
+            <div class="vline">
+                <div class="vertical-line"></div>
+            </div>
+            <div id="form-droite">
+                <h2>Coordonnées :</h2>
+                <div id="nom-prenom">
+                    <div>
+                        <label class="nom" for="nom">Nom :
+                            <input type="text" name="nom">
+                        </label>
+                    </div>
+                    <div>
+                        <label class="nom" for="prenom">Prénom :
+                            <input type="text" name="prenom">
+                        </label>
+                    </div>
+                </div>
+                <div id="phone-email">
+                    <div>
+                        <label class="phone" for="phone">Téléphone :
+                            <input type="tel" name="phone">
+                        </label>
+                    </div>
+                    <div>
+                        <label class="phone" for="email">Email :
+                            <input type="email" name="email">
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <label id="comment" for="message">Commentaire :
+                        <textarea name="message" rows="5" cols="50"></textarea>
+                    </label>
+                </div>
+                <div id="submit">
+                    <button type="submit">Réserver</button>
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div id="headfooter">
+            <h1>SmartDrive</h1>
+            <div id="reseau">
+                <a href="">
+                    <img src="Images/facebook-brands-solid.svg">
+                </a>
+                <a href="">
+                    <img src="Images/instagram-brands-solid.svg">
+                </a>
+                <a href="">
+                    <img src="Images/envelope-solid.svg">
+                </a>
+                <a href="">
+                    <img src="Images/linkedin-brands-solid.svg">
+                </a>
+            </div>
+        </div>
+        <div id="line">
+            <div id="horizontal-line"></div>
+        </div>
+        <div id="bottomfooter">
+            <ul class="nav-listing">
+                <li><a href="#nav" >Accueil</a></li>
+                <li><a href="contact.html">Services</a></li>
+                <li><a href="réservation.html">Réservation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div id="mention">
+                <a href="mention.html">Mention Légales</a>
+            </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>    
+</body> 
+</html>
