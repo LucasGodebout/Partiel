@@ -13,31 +13,61 @@
 </head>
 <body>
     <nav>
-        <div id="nav">
-            <div id="nav-container">
-                <a id="nav-logo" href="index.html">
-                    <img src="Images/Plan de travail 1_1.svg">
-                </a>
-                <ul class="nav-listing">
-                    <li><a href="index.html">Accueil</a></li>
+        <a class="nav-logo" href="index.html">
+            <img src="Images/Plan de travail 1_1.svg">
+        </a>
+        <ul ontouchstart=showSidebar()>
+                <li class="hide-mobile"><a href="index.html">Accueil</a></li>
+                <li class="hide-mobile"><a href="#ancre">Services ▼</a>
+                    <ul class="dropdown">
+                        <li class="hide-mobile"><a href="demande.html">A la demande</a></li>
+                        <li class="hide-mobile"><a href="distance.html">Toutes distances</a></li>
+                        <li class="hide-mobile"><a href="aeroport.html">Aéroports</a></li>
+                        <li class="hide-mobile"><a href="gare.html">Gares</a></li>
+                        <li class="hide-mobile"><a href="balneaire.html">Station balnéaires</a></li>
+                        <li class="hide-mobile"><a href="business.html">Business</a></li>
+                        <li class="hide-mobile"><a href="mariage.html">Mariage</a></li>
+                        <li class="hide-mobile"><a href="tourisme.html">Tourisme</a></li>
+                    </ul>
+                </li>
+                <li class="hide-mobile"><a href="réservation.html">Réservation</a></li>
+                <li class="hide-mobile"><a href="contact.html">Contact</a></li>
+                <li id="hide-pc"><a href="#"><span  onclick=showSidebar() class="material-icons">menu</span></a></li>
+            </ul>
+        <div class="sidebar">
+            <a class="nav-logo" href="index.html">
+                <img src="Images/Plan de travail 1_1.svg">
+            </a>
+            <ul>
+                <li><a href="#"><span onclick=hideSidebar() ontouchstart=hideSidebar() class="material-icons">close</span></a></li>
+                <li><a href="index.html">Accueil</a></li>
                     <li><a href="#ancre">Services ▼</a>
-                        <ul class="dropdown">
-                            <li><a href="demande.html">A la demande</a></li>
-                            <li><a href="distance.html">Toutes distances</a></li>
-                            <li><a href="aeroport.html">Aéroports</a></li>
-                            <li><a href="gare.html">Gares</a></li>
-                            <li><a href="balneaire.html">Station balnéaires</a></li>
-                            <li><a href="business.html">Business</a></li>
-                            <li><a href="mariage.html">Mariage</a></li>
-                            <li><a href="tourisme.html">Tourisme</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="réservation.html">Réservation</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+                    <ul class="dropdown">
+                        <li><a href="demande.html">A la demande</a></li>
+                        <li><a href="distance.html">Toutes distances</a></li>
+                        <li><a href="aeroport.html">Aéroports</a></li>
+                        <li><a href="gare.html">Gares</a></li>
+                        <li><a href="balneaire.html">Station balnéaires</a></li>
+                        <li><a href="business.html">Business</a></li>
+                        <li><a href="mariage.html">Mariage</a></li>
+                        <li><a href="tourisme.html">Tourisme</a></li>
+                    </ul>
+                </li>
+                <li><a href="réservation.html">Réservation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
     </nav>
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+    </script>
     <header id="SD">
         <div id="SmartDrive">
             <h1>SmartDrive</h1>
@@ -65,31 +95,31 @@
             </a>
             <a href="distance.html">
                 <img src="Images/road-solid.svg">
-                <p>Toutes distances</p>
+                Toutes distances
             </a>
             <a href="aeroport.html">
                 <img src="Images/plane-solid.svg">
-                <p>Aéroports</p>
+                Aéroports
             </a>
             <a href="gare.html">
                 <img src="Images/train-solid.svg">
-                <p>Gares</p>
+                Gares
             </a>
             <a href="balneaire.html">
                 <img src="Images/umbrella-beach-solid.svg">
-                <p>Stations balnéaires</p>
+                Stations balnéaires
             </a>
             <a href="business.html">
                 <img src="Images/address-card-solid.svg">
-                <p>Business</p>
+                Business
             </a>
             <a href="mariage.html">
                 <img src="Images/heart-solid.svg">
-                <p>Mariage</p>
+                Mariage
             </a>
             <a href="tourisme.html">
                 <img src="Images/map-solid.svg">
-                <p>Tourisme</p>
+                Tourisme</p>
             </a>
         </div>
         <div>
@@ -109,36 +139,38 @@
                 <img src="Images/Photo slides.png">
             </div>
         </div>
-        <div>
-            <h1>Nos services</h1>
-        </div>
-        <div class="service">
-            <img src="Images/Frame 37.png">
-            <div class="service-txt">
-                <h2>Chauffeur pour entreprise</h2>
-                <p>En plus des transports pour les particuliers, nous avons des solutions adaptées aux professionnels. Nos voitures SmartDrive sont disponibles pour réaliser des transferts professionnels tels que le déplacement de vos clients de la gare d’Angers à votre entreprise. Avec des voitures SmartDrive, nous vous assurons une course agréable. Nos voitures peuvent également intervenir pour les déplacements lors de vos événements d’entreprise.</p>
+        <div id="services">
+            <div>
+                <h1>Nos services</h1>
             </div>
-        </div>
-        <div class="service">
-            <div class="service2-txt">
-                <h2>Visiter Angers et ses alentours</h2>
-                <p>Besoin d’un transfert entre l’aéroport de Nantes et la gare d’Angers ? Nos voitures expérimentés et ponctuels vous conduisent à l’aéroport ou à la gare, assurant votre arrivée à temps pour votre vol ou train. Avec SmartDrive, vous pouvez réserver votre voiture autonome en ligne, même pour des déplacements en pleine nuit.</p>
+            <div class="service">
+                <img src="Images/Frame 37.png">
+                <div class="service-txt">
+                    <h2>Chauffeur pour entreprise</h2>
+                    <p>En plus des transports pour les particuliers, nous avons des solutions adaptées aux professionnels. Nos voitures SmartDrive sont disponibles pour réaliser des transferts professionnels tels que le déplacement de vos clients de la gare d’Angers à votre entreprise. Avec des voitures SmartDrive, nous vous assurons une course agréable. Nos voitures peuvent également intervenir pour les déplacements lors de vos événements d’entreprise.</p>
+                </div>
             </div>
-            <img src="Images/Frame 37 (1).png">
-        </div>
-        <div class="service">
-            <img src="Images/Frame 37 (2).png">
-            <div class="service-txt">
-                <h2>Transfert gare aéroport</h2>
-                <p>Besoin d’un transfert entre l’aéroport de Nantes et la gare d’Angers ? Nos chauffeurs expérimentés et ponctuels vous conduisent à l’aéroport ou à la gare, assurant votre arrivée à temps pour votre vol ou train. Avec Solu’drive VTC Angers, vous pouvez réserver votre chauffeur privé en ligne, même pour des déplacements en pleine nuit.</p>
+            <div class="service-2">
+                <img src="Images/Frame 37 (1).png">
+                <div class="service-txt">
+                    <h2>Visiter Angers et ses alentours</h2>
+                    <p>Besoin d’un transfert entre l’aéroport de Nantes et la gare d’Angers ? Nos voitures expérimentés et ponctuels vous conduisent à l’aéroport ou à la gare, assurant votre arrivée à temps pour votre vol ou train. Avec SmartDrive, vous pouvez réserver votre voiture autonome en ligne, même pour des déplacements en pleine nuit.</p>
+                </div>
             </div>
-        </div>
-        <div class="service">
-            <div class="service2-txt">
-                <h2>Location de voiture de mariage</h2>
-                <p>Chez SmartDrive, nous comprenons que chaque événement est unique. Nous mettons à disposition des voitures professionnels, formés pour assurer vos transports privés le jour de votre mariage ou tout autre événement. Grâce à notre service de voiture de tourisme, nous vous garantissons un déplacement en toute sécurité et sérénité, avec des véhicules haut de gamme. De plus, nous proposons un service de navette pour le transport de vos invités à travers la région.</p>
+            <div class="service">
+                <img src="Images/Frame 37 (2).png">
+                <div class="service-txt">
+                    <h2>Transfert gare aéroport</h2>
+                    <p>Besoin d’un transfert entre l’aéroport de Nantes et la gare d’Angers ? Nos chauffeurs expérimentés et ponctuels vous conduisent à l’aéroport ou à la gare, assurant votre arrivée à temps pour votre vol ou train. Avec Solu’drive VTC Angers, vous pouvez réserver votre chauffeur privé en ligne, même pour des déplacements en pleine nuit.</p>
+                </div>
             </div>
-            <img src="Images/Frame 37 (3).png">
+            <div class="service-2">
+                <img src="Images/Frame 37 (3).png">
+                <div class="service-txt">
+                    <h2>Location de voiture de mariage</h2>
+                    <p>Chez SmartDrive, nous comprenons que chaque événement est unique. Nous mettons à disposition des voitures professionnels, formés pour assurer vos transports privés le jour de votre mariage ou tout autre événement. Grâce à notre service de voiture de tourisme, nous vous garantissons un déplacement en toute sécurité et sérénité, avec des véhicules haut de gamme. De plus, nous proposons un service de navette pour le transport de vos invités à travers la région.</p>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
@@ -173,7 +205,6 @@
                 <a href="mention.html">Mention Légales</a>
             </div>
         </div>
-    </footer>
-    <script src="index.js"></script>    
+    </footer>    
 </body> 
 </html>

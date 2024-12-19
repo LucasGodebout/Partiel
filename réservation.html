@@ -9,17 +9,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="icon" type="image/x-svg" href="Images/Plan de travail 1_1.svg">
-    <title>SmartDrive - Réservation</title>
+    <title>SmartDrive - Accueil</title>
 </head>
-<nav>
-    <div id="nav">
-        <div id="nav-container">
-            <a id="nav-logo" href="index.html">
+<body>
+    <nav>
+        <a class="nav-logo" href="index.html">
+            <img src="Images/Plan de travail 1_1.svg">
+        </a>
+        <ul ontouchstart=showSidebar()>
+                <li class="hide-mobile"><a href="index.html">Accueil</a></li>
+                <li class="hide-mobile"><a href="#ancre">Services ▼</a>
+                    <ul class="dropdown">
+                        <li class="hide-mobile"><a href="demande.html">A la demande</a></li>
+                        <li class="hide-mobile"><a href="distance.html">Toutes distances</a></li>
+                        <li class="hide-mobile"><a href="aeroport.html">Aéroports</a></li>
+                        <li class="hide-mobile"><a href="gare.html">Gares</a></li>
+                        <li class="hide-mobile"><a href="balneaire.html">Station balnéaires</a></li>
+                        <li class="hide-mobile"><a href="business.html">Business</a></li>
+                        <li class="hide-mobile"><a href="mariage.html">Mariage</a></li>
+                        <li class="hide-mobile"><a href="tourisme.html">Tourisme</a></li>
+                    </ul>
+                </li>
+                <li class="hide-mobile"><a href="réservation.html">Réservation</a></li>
+                <li class="hide-mobile"><a href="contact.html">Contact</a></li>
+                <li id="hide-pc"><a href="#"><span  onclick=showSidebar() class="material-icons">menu</span></a></li>
+            </ul>
+        <div class="sidebar">
+            <a class="nav-logo" href="index.html">
                 <img src="Images/Plan de travail 1_1.svg">
             </a>
-            <ul class="nav-listing">
+            <ul>
+                <li><a href="#"><span onclick=hideSidebar() ontouchstart=hideSidebar() class="material-icons">close</span></a></li>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="#ancre">Services ▼</a>
+                    <li><a href="#ancre">Services ▼</a>
                     <ul class="dropdown">
                         <li><a href="demande.html">A la demande</a></li>
                         <li><a href="distance.html">Toutes distances</a></li>
@@ -35,8 +57,17 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-    </div>
-</nav>
+    </nav>
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+    </script>
     <main>
         <h1>Réservez en ligne</h1>
         <form class="reservation" action="/submit" method="post">
@@ -82,9 +113,7 @@
                     </label>
                 </div>
             </div>
-            <div class="vline">
                 <div class="vertical-line"></div>
-            </div>
             <div id="form-droite">
                 <h2>Coordonnées :</h2>
                 <div id="nom-prenom">

@@ -9,35 +9,65 @@
     <link href="https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="icon" type="image/x-svg" href="Images/Plan de travail 1_1.svg">
-    <title>SmartDrive - Réservation</title>
+    <title>SmartDrive - Accueil</title>
 </head>
 <body>
     <nav>
-        <div id="nav">
-            <div id="nav-container">
-                <a id="nav-logo" href="index.html">
-                    <img src="Images/Plan de travail 1_1.svg">
-                </a>
-                <ul class="nav-listing">
-                    <li><a href="index.html">Accueil</a></li>
+        <a class="nav-logo" href="index.html">
+            <img src="Images/Plan de travail 1_1.svg">
+        </a>
+        <ul ontouchstart=showSidebar()>
+                <li class="hide-mobile"><a href="index.html">Accueil</a></li>
+                <li class="hide-mobile"><a href="#ancre">Services ▼</a>
+                    <ul class="dropdown">
+                        <li class="hide-mobile"><a href="demande.html">A la demande</a></li>
+                        <li class="hide-mobile"><a href="distance.html">Toutes distances</a></li>
+                        <li class="hide-mobile"><a href="aeroport.html">Aéroports</a></li>
+                        <li class="hide-mobile"><a href="gare.html">Gares</a></li>
+                        <li class="hide-mobile"><a href="balneaire.html">Station balnéaires</a></li>
+                        <li class="hide-mobile"><a href="business.html">Business</a></li>
+                        <li class="hide-mobile"><a href="mariage.html">Mariage</a></li>
+                        <li class="hide-mobile"><a href="tourisme.html">Tourisme</a></li>
+                    </ul>
+                </li>
+                <li class="hide-mobile"><a href="réservation.html">Réservation</a></li>
+                <li class="hide-mobile"><a href="contact.html">Contact</a></li>
+                <li id="hide-pc"><a href="#"><span  onclick=showSidebar() class="material-icons">menu</span></a></li>
+            </ul>
+        <div class="sidebar">
+            <a class="nav-logo" href="index.html">
+                <img src="Images/Plan de travail 1_1.svg">
+            </a>
+            <ul>
+                <li><a href="#"><span onclick=hideSidebar() ontouchstart=hideSidebar() class="material-icons">close</span></a></li>
+                <li><a href="index.html">Accueil</a></li>
                     <li><a href="#ancre">Services ▼</a>
-                        <ul class="dropdown">
-                            <li><a href="demande.html">A la demande</a></li>
-                            <li><a href="distance.html">Toutes distances</a></li>
-                            <li><a href="aeroport.html">Aéroports</a></li>
-                            <li><a href="gare.html">Gares</a></li>
-                            <li><a href="balneaire.html">Station balnéaires</a></li>
-                            <li><a href="business.html">Business</a></li>
-                            <li><a href="mariage.html">Mariage</a></li>
-                            <li><a href="tourisme.html">Tourisme</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="réservation.html">Réservation</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+                    <ul class="dropdown">
+                        <li><a href="demande.html">A la demande</a></li>
+                        <li><a href="distance.html">Toutes distances</a></li>
+                        <li><a href="aeroport.html">Aéroports</a></li>
+                        <li><a href="gare.html">Gares</a></li>
+                        <li><a href="balneaire.html">Station balnéaires</a></li>
+                        <li><a href="business.html">Business</a></li>
+                        <li><a href="mariage.html">Mariage</a></li>
+                        <li><a href="tourisme.html">Tourisme</a></li>
+                    </ul>
+                </li>
+                <li><a href="réservation.html">Réservation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
     </nav>
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+    </script>
     <main>
         <h1>Mentions Légales</h1>
         <p>Conformément aux dispositions de la loi française n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique (LCEN), voici les informations relatives au site internet de SmartDrive.</p>
