@@ -40,6 +40,20 @@ body{
     padding: 0 22px;
     max-width:6vw ;
 }
+ul li ul.dropdown li{
+    display: block;
+}
+ul li ul.dropdown{
+    padding: 20px 0;
+    width: auto;
+    background: #A31B1E;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+ul li:hover ul.dropdown{
+    display: block;
+}
 #SD{
     background-image:url(Images/AdobeStock_826654348\ 1.png);
     background-repeat: no-repeat;
@@ -84,30 +98,25 @@ main h1{
     align-items: flex-start;
     margin:0 10vw 5vw ;
     gap: 1vw;
-
 }
-#CTA button{
+#CTA a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #A31B1E;
     width: 7vw;
     height: 3.5vw;
     border: #A31B1E solid 1px;
     border-radius:12px ;
     color: #DBD6C8;
-
-}
-#CTA a {
     text-decoration: none;
     font-size: 14px;
     font-family: "Konkhmer Sleokchher";
-    color: #DBD6C8;
-}
-#CTA button:hover{
-    background-color: #DBD6C8;
-    color: #A31B1E;
-    border: #DBD6C8;
 }
 #CTA a:hover{
     color: #A31B1E;
+    background-color: #DBD6C8;
+    border: #DBD6C8 solid 1px;
 }
 #card {
     display: flex;
@@ -120,23 +129,25 @@ main h1{
 #card img{
     width: 3vw;
 }
-#card button{
+#card a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 18.5vw;
     height: 12vw;
     color: #232323;
     background-color: #DBD6C8;
     border: #DBD6C8 solid 1px;
     border-radius: 1vw;
-}
-#card a{
     text-decoration: none;
     font-size: 24px;
-    color:#232323;
     font-family: "Konkhmer Sleokchher";
+    gap: 1vw;
 }
 #card p{
     margin: 0;
-}#card button:hover{
+}#card a:hover{
     background-color: #A31B1E;
     border: #A31B1E;
 }
@@ -381,6 +392,7 @@ footer{
     border-radius: 10px;
     color: #DBD6C8;
     font-size: 16px;
+    font-family: "Konkhmer Sleokchher";
 }
 #submit button:hover{
     background-color: #DBD6C8;
@@ -484,4 +496,60 @@ footer{
 }
 #message textarea::placeholder{
     padding: 1vw;
+}
+.type-service{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vw;
+    margin: 5vw;
+}
+.type-service{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 1vw;
+    margin: 5vw 0;
+}
+.type-service-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5vw;
+    margin: 0 6vw;
+}
+.type-service-button a{
+    text-decoration: none;
+    background-color: #DBD6C8;
+    width: 100%;
+    font-size: 20px;
+    font-family: "Konkhmer Sleokchher";
+    color: #A31B1E;
+    text-align: center;
+    border: #DBD6C8 solid 1px;
+    border-radius: 10px;
+    padding: 1vw 0;
+}
+.type-service-button a:hover{
+    color: #DBD6C8;
+    background-color: #A31B1E;
+    border: #A31B1E solid 1px;
+}
+.type-service-text{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1vw;
+    margin: 0 6vw;
+    font-size: 20px;
+}
+.type-service-text h1{
+    font-size: 44px;
+}
+.type-service-text h3{
+    margin-bottom: 0;
 }
